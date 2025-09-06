@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicios Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#1a73e8',
+          },
+          spacing: {
+            '72': '18rem',
+          },
+          screens: {
+            'xs': '475px',
+          },
+          width: {
+            'custom-w': '36rem',
+          },
+          minWidth: {
+            'custom-min-w': '12rem',
+          },
+          minHeight: {
+            'custom-min-h': '10rem',
+          },
+        },
+      }
+    }
+  </script>
+</head>
+<body class="p-6">
+
+  <!-- Botón -->
+  <button class="bg-brand text-white px-4 py-2 rounded mb-6">
+    Brand
+  </button>
+
+  <!-- Div -->
+  <div class="bg-gray-200 p-72 mb-6">
+    "72"
+  </div>
+
+  <!-- Div con cambio de color -->
+  <div class="h-24 mb-6
+              bg-red-400 
+              xs:bg-yellow-400 
+              sm:bg-green-400 
+              md:bg-blue-400 
+              lg:bg-purple-400 
+              2xl:bg-pink-400">
+    "XS"
+  </div>
+
+  <!-- Caja con width custom-w -->
+  <div class="bg-indigo-300 h-24 w-custom-w mb-6 flex items-center justify-center">
+    "custom-w"
+  </div>
+
+  <!-- Botón con min-width custom-min-w -->
+  <button class="bg-green-600 text-white py-2 px-4 rounded min-w-custom-min-w mb-6">
+    "custom-min-w"
+  </button>
+
+  <!-- Contenedor con min-height custom-min-h -->
+  <div class="min-h-custom-min-h bg-yellow-200 flex items-center justify-center mb-6">
+    "custom-min-h"
+  </div>
+
+  <div class="grid gap-4 mb-6 
+              sm:grid-cols-1 
+              md:grid-cols-2 
+              lg:grid-cols-3 
+              2xl:grid-cols-4">
+    <div class="bg-red-500 aspect-square"></div>
+    <div class="bg-green-500 aspect-square"></div>
+    <div class="bg-blue-500 aspect-square"></div>
+    <div class="bg-yellow-500 aspect-square"></div>
+    <div class="bg-purple-500 aspect-square"></div>
+    <div class="bg-pink-500 aspect-square"></div>
+    <div class="bg-indigo-500 aspect-square"></div>
+    <div class="bg-teal-500 aspect-square"></div>
+  </div>
+
+</body>
+</html>
