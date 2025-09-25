@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.header__menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* INICIO */
+.inicio {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+.inicio__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.logo-inicio {
+  height: auto;
+  width: 250px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 15px;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #ff6600;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+/* SECCIONES */
+.nosotros, .productos, .contacto {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+/* PRODUCTOS */
+.productos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.productos__grid img {
+  width: 120px;
+  height: auto;
+  display: block;
+  border-radius: 10px; /* optional, for a nicer look */
+}
+
+
+
+
+/* CONTACTO */
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contacto__form input, .contacto__form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* FOOTER */
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.producto img {
+  max-width: 250px;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+
+  /* Ajustes para el menú de navegación */
+  .header__nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .header__menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .inicio__contenido {
+    flex-direction: column;
+  }
+  .logo-inicio {
+    width: 200px;
+  }
+
+  .productos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto__form {
+    padding: 0 1rem;
+  }
+}

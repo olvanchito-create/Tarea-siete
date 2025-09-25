@@ -1,0 +1,65 @@
+body {
+display: flex;
+list-style: none;
+gap: 1rem;
+margin: 0;
+padding: 0;
+}
+.header__link {
+text-decoration: none;
+color: #333;
+}
+.header__link:focus, .header__link:hover {
+text-decoration: underline;
+}
+
+
+.bio, .experience, .skills, .contact {
+max-width: 900px;
+margin: 2rem auto;
+padding: 1rem;
+background: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.bio__title, .experience__title, .skills__title, .contact__title {
+font-size: 1.8rem;
+margin-bottom: 1rem;
+}
+
+
+.skills__list, .contact__list {
+list-style: none;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+gap: 10px;
+padding: 0;
+margin: 0;
+}
+.skills__item, .contact__item {
+background: #f1f1f1;
+padding: 10px;
+text-align: center;
+border-radius: 4px;
+}
+
+
+.footer {
+text-align: center;
+padding: 1rem;
+background: #fff;
+border-top: 1px solid #ddd;
+margin-top: 2rem;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+.header__container {
+flex-direction: column;
+}
+.header__menu {
+flex-direction: column;
+align-items: center;
+}
+}
